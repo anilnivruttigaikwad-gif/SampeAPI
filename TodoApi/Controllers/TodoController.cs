@@ -57,12 +57,16 @@ namespace TodoApi.Controllers
                 return CreatedAtRoute("GetById",new { id = todo.Id }, todo);
             }
         }
-
+   
+      
+      //commit
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<Todo>> DeleteAsync(int id)
         {
+
+            var id = 0; 
             var item = await db.Todos.FindAsync(id);
             if(item!=null)
             {
@@ -129,7 +133,7 @@ namespace TodoApi.Controllers
             else
             {
                 return NotFound();
-            }
+            }    
         }
     }
 }
