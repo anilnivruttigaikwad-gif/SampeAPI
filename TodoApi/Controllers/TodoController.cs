@@ -103,8 +103,8 @@ namespace TodoApi.Controllers
                 return NotFound();
             }
         }
-
-        HttpPut("{id}")]
+        
+        [HttpPut("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
